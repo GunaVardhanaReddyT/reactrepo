@@ -1,0 +1,131 @@
+.payment-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.payment-container:hover {
+  transform: translateY(-5px);
+}
+
+.payment-container h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.booking-details {
+  margin-bottom: 30px;
+  text-align: left;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.booking-details p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.booking-details p strong {
+  color: #222;
+  font-weight: 500;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.payment-form .StripeElement {
+  padding: 12px;
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-form .StripeElement--focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+.payment-form .StripeElement--invalid {
+  border-color: #dc3545;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .payment-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .payment-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .booking-details {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .payment-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .payment-form .StripeElement {
+    padding: 10px;
+  }
+}

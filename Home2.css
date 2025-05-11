@@ -1,0 +1,279 @@
+/* Container for the entire page */
+.movie-details-container {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e50914;
+}
+
+.nav-links span {
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.location-dropdown {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 15px;
+    cursor: pointer;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    background-size: 16px;
+    padding-right: 25px;
+}
+
+.location-dropdown:focus {
+    outline: none;
+    border-color: #e50914;
+}
+
+/* Movie details section */
+.movie-details {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: white;
+    position: relative;
+}
+
+.movie-poster img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.movie-info {
+    flex: 1;
+}
+
+.movie-info h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rating span {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.rate-btn {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.user-rating {
+    font-size: 14px;
+    margin-left: 10px;
+    color: #ffd700; /* Gold color for user's rating */
+}
+
+.details span {
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.meta {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.book-tickets-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.in-cinemas {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.share {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.share-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+/* Rating popup overlay */
+.rating-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Rating popup */
+.rating-popup {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+.rating-popup h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Stars container */
+.stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Individual star */
+.star {
+    font-size: 30px;
+    color: #ccc; /* Gray for unselected stars */
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Filled (selected or hovered) star */
+.star.filled {
+    color: #ffd700; /* Gold for selected stars */
+}
+
+/* Hover animation for stars */
+.star:hover,
+.star:hover ~ .star {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+/* Rating actions (Submit and Cancel buttons) */
+.rating-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.submit-rating-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.submit-rating-btn:hover {
+    background-color: #c40812;
+}
+
+.cancel-rating-btn {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.cancel-rating-btn:hover {
+    background-color: #bbb;
+}
+
+/* Trailer section */
+.trailer-section {
+    padding: 20px;
+}
+
+.trailer-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.trailer-section iframe {
+    max-width: 100%;
+}
+
+/* About the movie section */
+.about-movie {
+    padding: 20px;
+}
+
+.about-movie h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-movie p {
+    font-size: 16px;
+    color: #333;
+}
